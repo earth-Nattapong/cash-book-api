@@ -9,4 +9,14 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('ping')
+  getPing(): string {
+    return this.appService.getPing();
+  }
+
+  @Get('healthz')
+  async getHealth() {
+    return this.appService.getHealth();
+  }
 }
